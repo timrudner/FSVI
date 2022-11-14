@@ -1,3 +1,5 @@
+# Tractable Function-Space Variational Inference in Bayesian Neural Networks (FSVI)
+
 This repository will contain the official implementation for
 
 **_Tractable Function-Space Variational Inference in Bayesian Neural Networks_**; Tim G. J. Rudner, Zonghao Chen, Yee Whye Teh, Yarin Gal. **NeurIPS 2022**.

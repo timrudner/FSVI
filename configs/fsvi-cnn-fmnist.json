@@ -1,0 +1,86 @@
+{
+    "configurations": [
+        {
+            "name": "fsvi-cnn-fmnist",
+            "id": "0",
+            "env": {
+                "XLA_PYTHON_CLIENT_MEM_FRACTION": "0.1",
+                "TF_CPP_MIN_LOG_LEVEL": "3",
+                "LD_LIBRARY_PATH": "",
+                "PYTHONHASHSEED": "0",
+                "PYTHONUNBUFFERED": "1",
+                "TF_CUDNN_DETERMINISTIC": "1",
+                "TF_DETERMINISTIC_OPS": "1"
+            },
+            "args": [
+                "--prior_var", "1",
+                "--num_epochs", "200",
+                "--optimizer_name", "sgd",
+                "--learning_rate", "0.005",
+                "--alpha", "0.005",
+                "--dataset", "fmnist",
+                "--batch_size", "128",
+                "--context_batch_size", "32",
+                "--momentum", "0.9",
+                "--model_name", "CNN",
+                "--method", "fsvi",
+                "--reg_type", "function_kl",
+                "--context_points", "train",
+                "--context_transform", "True",
+                "--forward_points", "joint",
+                "--reg_points", "context",
+                "--ood_points", "mnist",
+                "--mc_samples_llk", "1",
+                "--mc_samples_eval", "10",
+                "--prior_mean", "0",
+                "--weight_decay", "0",
+                "--init_logvar", "-20",
+                "--init_final_layer_bias_logvar", "-8",
+                "--prior_feature_logvar", "-20",
+                "--log_frequency", "10",
+                "--seed", "0"
+            ]
+        },
+        {
+            "name": "fsvi-cnn-fmnist-kmnist",
+            "id": "1",
+            "env": {
+                "XLA_PYTHON_CLIENT_MEM_FRACTION": "0.1",
+                "TF_CPP_MIN_LOG_LEVEL": "3",
+                "LD_LIBRARY_PATH": "",
+                "PYTHONHASHSEED": "0",
+                "PYTHONUNBUFFERED": "1",
+                "TF_CUDNN_DETERMINISTIC": "1",
+                "TF_DETERMINISTIC_OPS": "1"
+            },
+            "args": [
+                "--prior_var", "1",
+                "--num_epochs", "200",
+                "--optimizer_name", "sgd",
+                "--learning_rate", "0.005",
+                "--alpha", "0.005",
+                "--dataset", "fmnist",
+                "--batch_size", "128",
+                "--context_batch_size", "32",
+                "--momentum", "0.9",
+                "--model_name", "CNN",
+                "--method", "fsvi",
+                "--reg_type", "function_kl",
+                "--context_points", "train",
+                "--context_transform", "True",
+                "--forward_points", "joint",
+                "--reg_points", "context",
+                "--ood_points", "mnist",
+                "--mc_samples_llk", "1",
+                "--mc_samples_eval", "10",
+                "--prior_mean", "0",
+                "--weight_decay", "0",
+                "--init_logvar", "-20",
+                "--init_final_layer_bias_logvar", "-8",
+                "--prior_feature_logvar", "-20",
+                "--log_frequency", "10",
+                "--seed", "0"
+            ]
+        }
+    ]
+}

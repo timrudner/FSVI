@@ -1,0 +1,86 @@
+{
+    "configurations": [
+        {
+            "name": "fsvi-resnet18-cifar10",
+            "id": "0",
+            "env": {
+                "XLA_PYTHON_CLIENT_MEM_FRACTION": "0.1",
+                "TF_CPP_MIN_LOG_LEVEL": "3",
+                "LD_LIBRARY_PATH": "",
+                "PYTHONHASHSEED": "0",
+                "PYTHONUNBUFFERED": "1",
+                "TF_CUDNN_DETERMINISTIC": "1",
+                "TF_DETERMINISTIC_OPS": "1"
+            },
+            "args": [
+                "--prior_var", "0.1",
+                "--num_epochs", "200",
+                "--optimizer_name", "sgd",
+                "--learning_rate", "0.005",
+                "--alpha", "0.05",
+                "--dataset", "cifar10",
+                "--batch_size", "128",
+                "--context_batch_size", "32",
+                "--momentum", "0.9",
+                "--model_name", "ResNet18",
+                "--method", "fsvi",
+                "--reg_type", "function_kl",
+                "--context_points", "train",
+                "--context_transform", "True",
+                "--forward_points", "joint",
+                "--reg_points", "joint",
+                "--ood_points", "svhn",
+                "--mc_samples_llk", "1",
+                "--mc_samples_eval", "5",
+                "--prior_mean", "0",
+                "--weight_decay", "0",
+                "--init_logvar", "-20",
+                "--init_final_layer_bias_logvar", "-8",
+                "--prior_feature_logvar", "-20",
+                "--log_frequency", "10",
+                "--seed", "0"
+            ]
+        },
+        {
+            "name": "fsvi-resnet18-cifar10-cifar100",
+            "id": "1",
+            "env": {
+                "XLA_PYTHON_CLIENT_MEM_FRACTION": "0.1",
+                "TF_CPP_MIN_LOG_LEVEL": "3",
+                "LD_LIBRARY_PATH": "",
+                "PYTHONHASHSEED": "0",
+                "PYTHONUNBUFFERED": "1",
+                "TF_CUDNN_DETERMINISTIC": "1",
+                "TF_DETERMINISTIC_OPS": "1"
+            },
+            "args": [
+                "--prior_var", "0.1",
+                "--num_epochs", "200",
+                "--optimizer_name", "sgd",
+                "--learning_rate", "0.005",
+                "--alpha", "0.05",
+                "--dataset", "cifar10",
+                "--batch_size", "128",
+                "--context_batch_size", "32",
+                "--momentum", "0.9",
+                "--model_name", "ResNet18",
+                "--method", "fsvi",
+                "--reg_type", "function_kl",
+                "--context_points", "cifar100",
+                "--context_transform", "True",
+                "--forward_points", "joint",
+                "--reg_points", "joint",
+                "--ood_points", "svhn",
+                "--mc_samples_llk", "1",
+                "--mc_samples_eval", "5",
+                "--prior_mean", "0",
+                "--weight_decay", "0",
+                "--init_logvar", "-20",
+                "--init_final_layer_bias_logvar", "-8",
+                "--prior_feature_logvar", "-20",
+                "--log_frequency", "10",
+                "--seed", "0"
+            ]
+        }
+    ]
+}

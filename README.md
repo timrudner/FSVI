@@ -54,7 +54,7 @@ python trainer_nn.py --config configs/fsvi-cnn-fmnist.json --config_id 0 --cwd p
 To run FSVI with a ResNet-18 on CIFAR-10, execute
 
 ```
-python trainer_nn.py --config configs/fsvi-rn18-cifar10.json --config_id 0 --cwd path/to/repo
+python trainer_nn.py --config configs/fsvi-resent18-cifar10.json --config_id 0 --cwd path/to/repo
 ```
 
 NB: The configs above do not use additional datasets to construct the context set. Instead, they use a corrupted (i.e., augmented) training set. To use another dataset (e.g., KMNIST or CIFAR-100), change the `--context_points` arg in the config. To to do this, simply change the `config_id` arg as shown below.
@@ -66,9 +66,8 @@ python trainer_nn.py --config configs/fsvi-cnn-fmnist.json --config_id 1 --cwd p
 
 **CIFAR-10** (with CIFAR-100 as context set)
 ```
-python trainer_nn.py --config configs/fsvi-rn18-cifar10.json --config_id 1 --cwd path/to/repo
+python trainer_nn.py --config configs/fsvi-resent18-cifar10.json --config_id 1 --cwd path/to/repo
 ```
-
 
 
 ## CIFAR-10 Corrupted Evaluation
